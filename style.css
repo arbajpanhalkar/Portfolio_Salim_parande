@@ -3097,7 +3097,7 @@ footer {
 }
 
 .social-links a {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 252, 252);
     font-size: 24px;
     margin: 0 10px;
     transition: color 0.3s ease;
