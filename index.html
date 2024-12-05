@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Engineering Leadership Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/gallery.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -29,10 +30,13 @@
         
         <ul class="nav-menu">
             <li><a href="#home" class="nav-link active" style="--i: 0"><i class="fas fa-home"></i> Home</a></li>
+            
+            
             <li><a href="#about" class="nav-link" style="--i: 1"><i class="fas fa-user"></i> About</a></li>
-            <li><a href="#experience" class="nav-link" style="--i: 2"><i class="fas fa-briefcase"></i> Experience</a></li>
             <li><a href="#skills" class="nav-link" style="--i: 3"><i class="fas fa-cogs"></i> Skills</a></li>
-            <li><a href="#gallery" class="nav-link" style="--i: 4"><i class="fas fa-images"></i> Gallery</a></li>
+           
+            <li><a href="#experience" class="nav-link" style="--i: 2"><i class="fas fa-briefcase"></i> Experience</a></li>
+             <li><a href="#gallery" class="nav-link" style="--i: 4"><i class="fas fa-images"></i> Gallery</a></li>
             <li><a href="#achievements" class="nav-link" style="--i: 5"><i class="fas fa-trophy"></i> Achievements</a></li>
             <li><a href="#contact" class="nav-link" style="--i: 6"><i class="fas fa-envelope"></i> Contact</a></li>
         </ul>
@@ -265,26 +269,28 @@
     </section>
 
     <!-- Gallery Section -->
-    <section id="gallery" class="gallery">
+    <section id="gallery" class="gallery-section">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <h2 class="section-title">Achievement Gallery</h2>
                 <div class="section-line"></div>
             </div>
-           
-            <div class="gallery-filter" data-aos="fade-up">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="awards">Awards</button>
-                <button class="filter-btn" data-filter="events">Events</button>
-                <button class="filter-btn" data-filter="team">Team</button>
-            </div> 
 
-            <div class="gallery-grid" data-aos="fade-up">
-                <div class="gallery-item" data-category="awards">
-                    <div class="gallery-item-inner">
+            <div class="gallery-filters" data-aos="fade-up">
+                <button class="filter-button active" data-filter="all">All</button>
+                <button class="filter-button" data-filter="awards">Awards</button>
+                <button class="filter-button" data-filter="events">Events</button>
+                <button class="filter-button" data-filter="team">Team</button>
+            </div>
+
+            <div class="gallery-masonry" data-aos="fade-up">
+                <!-- Large featured items -->
+                <div class="gallery-item featured" data-category="awards">
+                    <div class="item-inner">
                         <img src="salimawrd.jpeg" alt="Best Manager Award">
-                        <div class="gallery-overlay">
-                            <div class="gallery-info">
+                        <div class="item-overlay">
+                            <div class="item-content">
+                                <span class="item-category">Awards</span>
                                 <h3>Best Manager Award</h3>
                                 <p>Recognition for Excellence in Leadership</p>
                             </div>
@@ -293,10 +299,11 @@
                 </div>
 
                 <div class="gallery-item" data-category="team">
-                    <div class="gallery-item-inner">
+                    <div class="item-inner">
                         <img src="team1.jpeg" alt="Team Excellence">
-                        <div class="gallery-overlay">
-                            <div class="gallery-info">
+                        <div class="item-overlay">
+                            <div class="item-content">
+                                <span class="item-category">Team</span>
                                 <h3>Team Excellence</h3>
                                 <p>Leading 150+ Workforce</p>
                             </div>
@@ -304,11 +311,12 @@
                     </div>
                 </div>
 
-                <div class="gallery-item" data-category="events">
-                    <div class="gallery-item-inner">
+                <div class="gallery-item featured" data-category="events">
+                    <div class="item-inner">
                         <img src="leader.jpg" alt="Leadership Summit">
-                        <div class="gallery-overlay">
-                            <div class="gallery-info">
+                        <div class="item-overlay">
+                            <div class="item-content">
+                                <span class="item-category">Events</span>
                                 <h3>Leadership Summit 2023</h3>
                                 <p>Sharing Insights on Operational Excellence</p>
                             </div>
@@ -317,10 +325,11 @@
                 </div>
 
                 <div class="gallery-item" data-category="awards">
-                    <div class="gallery-item-inner">
+                    <div class="item-inner">
                         <img src="bestawrd.jpeg" alt="Best Engineer Award">
-                        <div class="gallery-overlay">
-                            <div class="gallery-info">
+                        <div class="item-overlay">
+                            <div class="item-content">
+                                <span class="item-category">Awards</span>
                                 <h3>Best Engineer Award</h3>
                                 <p>Technical Excellence Recognition</p>
                             </div>
@@ -328,105 +337,81 @@
                     </div>
                 </div>
 
-                <div class="gallery-item" data-category="team">
-                    <div class="gallery-item-inner">
-                        <img src="imgdemo.jpeg" alt="Team Building">
-                        <div class="gallery-overlay">
-                            <div class="gallery-info">
-                                <h3>Cricket Tourment</h3>
-                                <!-- <p>Fostering Collaboration and Growth</p> -->
+                <!-- Hidden items initially -->
+                <div class="gallery-item hidden" data-category="team">
+                    <div class="item-inner">
+                        <img src="imgdemo.jpeg" alt="Cricket Tournament">
+                        <div class="item-overlay">
+                            <div class="item-content">
+                                <span class="item-category">Team</span>
+                                <h3>Cricket Tournament</h3>
+                                <p>Team Building Event</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="gallery-item" data-category="events">
-                    <div class="gallery-item-inner">
-                        <img src="salim3.jpeg" alt="Industry Conference">
-                        <div class="gallery-overlay">
-                            <div class="gallery-info">
-                                <!-- <h3>Industry Conference</h3>
-                                <p>Speaking on Zero Downtime Strategy</p> -->
+                <div class="gallery-item hidden featured" data-category="events">
+                    <div class="item-inner">
+                        <img src="salim3.jpeg" alt="Professional Event">
+                        <div class="item-overlay">
+                            <div class="item-content">
+                                <span class="item-category">Events</span>
+                                <h3>Professional Event</h3>
+                                <p>Industry Networking</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="gallery-item" data-category="events">
-                    <div class="gallery-item-inner">
-                        <img src="Picture1.png" alt="Industry Conference">
-                        <div class="gallery-overlay">
-                            <div class="gallery-info">
-                                <!-- <h3>Industry Conference</h3>
-                                <p>Speaking on Zero Downtime Strategy</p> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="events">
-                    <div class="gallery-item-inner">
-                        <img src="Picture2.png" alt="Industry Conference">
-                        <div class="gallery-overlay">
-                            <div class="gallery-info">
-                                <!-- <h3>Industry Conference</h3>
-                                <p>Speaking on Zero Downtime Strategy</p> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="events">
-                    <div class="gallery-item-inner">
-                        <img src="Picture6.png" alt="Industry Conference">
-                        <div class="gallery-overlay">
-                            <div class="gallery-info">
-                                <!-- <h3>Industry Conference</h3>
-                                <p>Speaking on Zero Downtime Strategy</p> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="events">
-                    <div class="gallery-item-inner">
-                        <img src="Picture10.png" alt="Industry Conference">
-                        <div class="gallery-overlay">
-                            <div class="gallery-info">
-                                <!-- <h3>Industry Conference</h3>
-                                <p>Speaking on Zero Downtime Strategy</p> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="events">
-                    <div class="gallery-item-inner">
-                        <img src="Picture8.png" alt="Industry Conference">
-                        <div class="gallery-overlay">
-                            <div class="gallery-info">
-                                <!-- <h3>Industry Conference</h3>
-                                <p>Speaking on Zero Downtime Strategy</p> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="events">
-                    <div class="gallery-item-inner">
-                        <img src="Picture7.png" alt="Industry Conference">
-                        <div class="gallery-overlay">
-                            <div class="gallery-info">
-                                <!-- <h3>Industry Conference</h3>
-                                <p>Speaking on Zero Downtime Strategy</p> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Lightbox -->
-            <div class="lightbox">
-                <span class="lightbox-close">&times;</span>
-                <img src="" alt="" class="lightbox-img">
-                <div class="lightbox-caption"></div>
-                <button class="lightbox-prev">&#10094;</button>
-                <button class="lightbox-next">&#10095;</button>
+                <div class="gallery-item hidden" data-category="events">
+                    <div class="item-inner">
+                        <img src="Picture8.png" alt="Achievement 1">
+                        <div class="item-overlay">
+                            <div class="item-content">
+                                <span class="item-category">Events</span>
+                                <h3>Achievement Showcase</h3>
+                                <p>Professional Milestone</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item hidden featured" data-category="events">
+                    <div class="item-inner">
+                        <img src="Picture6.png" alt="Achievement 2">
+                        <div class="item-overlay">
+                            <div class="item-content">
+                                <span class="item-category">Events</span>
+                                <h3>Industry Recognition</h3>
+                                <p>Excellence in Field</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            
+
+            <div class="gallery-load-more" data-aos="fade-up">
+                <button id="loadMore" class="load-more-btn">
+                    <span>Load More</span>
+                    <i class="fas fa-arrow-down"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Modern Lightbox -->
+        <div class="lightbox" id="lightbox">
+            <button class="lightbox-close">&times;</button>
+            <div class="lightbox-content">
+                <img src="" alt="" class="lightbox-image">
+                <div class="lightbox-details">
+                    <h3 class="lightbox-title"></h3>
+                    <p class="lightbox-description"></p>
+                </div>
+            </div>
+            <button class="lightbox-nav prev">&lt;</button>
+            <button class="lightbox-nav next">&gt;</button>
         </div>
     </section>
 
@@ -577,5 +562,6 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
+    <script src="js/gallery.js"></script>
 </body>
 </html>
