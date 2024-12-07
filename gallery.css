@@ -300,6 +300,133 @@
     transform: scale(1.1);
 }
 
+/* Timeline Styles */
+.timeline-container {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.center-line {
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background: #2b6cb0;
+    left: 30px;
+    top: 0;
+}
+
+.timeline-card {
+    position: relative;
+    margin-bottom: 30px;
+    margin-left: 60px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.timeline-card:hover {
+    transform: translateX(5px);
+}
+
+.timeline-icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #2b6cb0;
+    border-radius: 50%;
+    left: -50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 0 0 4px #fff;
+}
+
+.timeline-icon i {
+    font-size: 1.2rem;
+}
+
+.timeline-content {
+    position: relative;
+}
+
+.timeline-year {
+    display: inline-block;
+    background: #ebf4ff;
+    color: #2b6cb0;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.timeline-content h3 {
+    color: #2d3748;
+    font-size: 1.2rem;
+    margin: 8px 0;
+}
+
+.timeline-content p {
+    color: #718096;
+    margin: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .timeline-container {
+        margin: 0 20px;
+    }
+
+    .timeline-card {
+        margin-left: 50px;
+        padding: 15px;
+    }
+
+    .timeline-icon {
+        width: 35px;
+        height: 35px;
+        left: -45px;
+    }
+
+    .timeline-icon i {
+        font-size: 1rem;
+    }
+
+    .center-line {
+        left: 25px;
+    }
+
+    /* Mobile animations */
+    .timeline-card {
+        opacity: 0;
+        transform: translateX(-30px);
+        animation: slideIn 0.5s ease forwards;
+    }
+
+    @keyframes slideIn {
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .timeline-card:nth-child(1) { animation-delay: 0.1s; }
+    .timeline-card:nth-child(2) { animation-delay: 0.2s; }
+    .timeline-card:nth-child(3) { animation-delay: 0.3s; }
+    .timeline-card:nth-child(4) { animation-delay: 0.4s; }
+    .timeline-card:nth-child(5) { animation-delay: 0.5s; }
+    .timeline-card:nth-child(6) { animation-delay: 0.6s; }
+
+    /* Touch interaction */
+    .timeline-card:active {
+        transform: scale(0.98);
+    }
+}
+
 /* Modern Experience Timeline Styles */
 .experience {
     padding: 100px 0;
