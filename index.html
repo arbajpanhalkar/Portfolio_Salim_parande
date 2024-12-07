@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Engineering Leadership Portfolio</title>
     <link rel="stylesheet" href="style.css">
-      <link rel="stylesheet" href="gallery.css">
-    
+    <link rel="stylesheet" href="css/gallery.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -38,9 +37,12 @@
            
             <li><a href="#experience" class="nav-link" style="--i: 2"><i class="fas fa-briefcase"></i> Experience</a></li>
              <li><a href="#gallery" class="nav-link" style="--i: 4"><i class="fas fa-images"></i> Gallery</a></li>
-            <li><a href="#achievements" class="nav-link" style="--i: 5"><i class="fas fa-trophy"></i> Achievements</a></li>
-            <li><a href="#contact" class="nav-link" style="--i: 6"><i class="fas fa-envelope"></i> Contact</a></li>
-        </ul>
+           
+             <li><a href="#achievements" class="nav-link" style="--i: 5"><i class="fas fa-trophy"></i> Achievements</a></li>
+             <li><a href="#career-timeline" class="nav-link" style="--i: 7"><i class="fas fa-timeline"></i> Career Timeline</a></li>
+       
+             <li><a href="#contact" class="nav-link" style="--i: 6"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
     </nav>
 
     <!-- Engineering Hero Section -->
@@ -235,34 +237,143 @@
                 <div class="section-line"></div>
             </div>
             <div class="timeline">
-                <div class="timeline-item" data-aos="fade-right">
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
                     <div class="timeline-icon">
-                        <i class="fas fa-user-tie"></i>
+                        <div class="icon-circle">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="timeline-connector"></div>
                     </div>
                     <div class="timeline-content">
+                        <span class="timeline-year">2024</span>
                         <h3>General Manager, Operations</h3>
                         <p class="timeline-date">Present Role</p>
-                        <p>Spearheading large-scale operations and driving strategic goals. Leading a team of over 500 dedicated professionals.</p>
+                        <div class="timeline-description">
+                            <p>Spearheading large-scale operations and driving strategic goals. Leading a team of over 500 dedicated professionals.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="timeline-item" data-aos="fade-left">
+
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
                     <div class="timeline-icon">
-                        <i class="fas fa-users"></i>
+                        <div class="icon-circle">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="timeline-connector"></div>
                     </div>
                     <div class="timeline-content">
+                        <span class="timeline-year">Career Growth</span>
                         <h3>Team Leader</h3>
-                        <p class="timeline-date">Career Growth</p>
-                        <p>Built and mentored teams to achieve operational milestones. Focus on team development and performance optimization.</p>
+                        <p class="timeline-date">Leadership Role</p>
+                        <div class="timeline-description">
+                            <p>Built and mentored teams to achieve operational milestones. Focus on team development and performance optimization.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="timeline-item" data-aos="fade-right">
+
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
                     <div class="timeline-icon">
-                        <i class="fas fa-tools"></i>
+                        <div class="icon-circle">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div class="timeline-connector"></div>
                     </div>
                     <div class="timeline-content">
+                        <span class="timeline-year">Career Start</span>
                         <h3>Service Engineer</h3>
-                        <p class="timeline-date">Career Start</p>
-                        <p>Focused on hands-on problem-solving and client engagement. Built foundation in engineering excellence.</p>
+                        <p class="timeline-date">Foundation Role</p>
+                        <div class="timeline-description">
+                            <p>Focused on hands-on problem-solving and client engagement. Built foundation in engineering excellence.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Career Timeline -->
+    <section id="career-timeline" class="experience">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Career Progression</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-icon">
+                        <div class="icon-circle">
+                            <i class="fas fa-building"></i>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2018 - 2024</span>
+                        <h3>AGM Operations</h3>
+                        <p class="timeline-company">Elixir Engineering Pvt Ltd.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-icon">
+                        <div class="icon-circle">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2007 - 2018</span>
+                        <h3>Sr. manager (Operations)</h3>
+                        <p class="timeline-company">Elixir Engineering Pvt Ltd</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-icon">
+                        <div class="icon-circle">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2000 - 2007</span>
+                        <h3>Engineer For Heavy equipment</h3>
+                        <p class="timeline-company">Voltas</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-icon">
+                        <div class="icon-circle">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">1998</span>
+                        <h3>Executive</h3>
+                        <p class="timeline-company">Bule Star services</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-icon">
+                        <div class="icon-circle">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">1996</span>
+                        <h3>Sr. Utility Technician</h3>
+                        <p class="timeline-company">Flow well services</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-icon">
+                        <div class="icon-circle">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">1994</span>
+                        <h3>Service Technician</h3>
+                        <p class="timeline-company">Mother dairy Baroda Aanad Gujrat</p>
                     </div>
                 </div>
             </div>
@@ -525,6 +636,7 @@
                             <li><a href="#experience">Experience</a></li>
                             <li><a href="#achievements">Achievements</a></li>
                             <li><a href="#contact">Contact</a></li>
+                            <li><a href="#career-timeline">Career Timeline</a></li>
                         </ul>
                     </div>
                     <div class="footer-social">
@@ -564,5 +676,44 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
     <script src="js/gallery.js"></script>
+
+    <script>
+        // Mobile timeline animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            
+            // Add index for staggered animations
+            timelineItems.forEach((item, index) => {
+                item.style.setProperty('--item-index', index);
+            });
+
+            // Handle touch interactions
+            timelineItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // Remove active class from all items
+                    timelineItems.forEach(i => i.classList.remove('active'));
+                    // Add active class to clicked item
+                    this.classList.add('active');
+                });
+            });
+
+            // Intersection Observer for animation triggers
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.2
+            });
+
+            // Observe timeline items
+            timelineItems.forEach(item => {
+                observer.observe(item);
+            });
+        });
+    </script>
 </body>
 </html>
